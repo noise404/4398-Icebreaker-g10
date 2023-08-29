@@ -15,3 +15,13 @@ headers = {
 user_request = requests.get("https://courses.ianapplebaum.com/api/syllabus/2", headers=headers)
 
 print(user_request.json())
+
+data = user_request.json()
+events = data.get('events', [])
+
+for event in events:
+    event_date = event.get('event_date')
+    print(event_date)
+
+
+
