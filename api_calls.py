@@ -20,8 +20,9 @@ data = user_request.json()
 events = data.get('events', [])
 
 for event in events:
+    event_name = event.get('event_name')
     event_date = event.get('event_date')
-    print(event_date)
+    print(event_name + " ---- " + event_date)
 
 
 
